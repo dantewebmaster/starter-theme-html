@@ -1,0 +1,30 @@
+$row_margin: -10px;
+$col_padding: 5px;
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.row {
+    clear: both;
+    float: left;
+    margin-left: $row_margin;
+    margin-right: $row_margin;
+    width: 100%;
+}
+.col {
+    display: block;
+    float: left;
+    min-height: 1px;
+    padding-left: $col_padding;
+    padding-right: $col_padding;
+    
+    @for $col from 1 through 12 {
+        $width: percentage(1 / $col);
+
+        &-#{$col} {
+            width: $width;
+        }
+    }
+}
