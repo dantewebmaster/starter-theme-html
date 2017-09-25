@@ -1,5 +1,5 @@
 # Starter Theme HTML
-This is a starter theme with all my initial setup for static HTML projects. Required node.js to run tasks with Gulp.
+This is a starter theme with all my initial setup for static HTML projects. Required node.js to run tasks with Gulp. This theme have all necessary gulp plugins and tasks to run a local server, auto reload the browser on code change, minify and concatenate html/css/js and optimize all project images.
 
 ## Required
 * node.js
