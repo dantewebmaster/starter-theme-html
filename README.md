@@ -26,6 +26,8 @@ This is a starter theme with all my initial setup for static HTML projects. Requ
 * gulp-cache
 * gulp-if
 * del
+* gulp-plumber
+* gulp-notify
 
 ### Changelog
-**24/09/2017 - v1.0.1** - Tudo testado e funcionando corretamente.
+**26/09/2017 - v1.0.2** - Adicionado notificações de erro/sucesso ao compilar arquivo sass.
