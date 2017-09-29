@@ -7,10 +7,9 @@ This is a starter theme with all my initial setup for static HTML projects. Requ
 
 ## Project Init
 1. Clone this repo
-2. Rename it to your project name
-3. Open another CMD and run `npm install`
-4. Run `gulp` to start watching files (.scss, .html, .js)
-5. To create the dist directory with minified .html, .css and .js, and optmized images run the comand `gulp build`
+2. Open another CMD and run `npm install`
+3. Run `gulp` to start watching files (.scss, .html, .js)
+4. To create the dist directory with minified .html, .css and .js, and optmized images run the comand `gulp build`
 
 ## Dependencies
 * gulp
