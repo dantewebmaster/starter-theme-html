@@ -1,5 +1,16 @@
-/* vars */
-/* defaults */
+/**
+ * Vars 
+ */
+/**
+ * Mixins
+ */
+/* below width media querie */
+/* default pseudo style */
+/* css triangle */
+/* REM units with pixel fallback */
+/**
+ * Defaults 
+ */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -21,7 +32,9 @@ img {
   padding: 1em 0;
   width: 100%; }
 
-/* typography */
+/**
+ * Typography 
+ */
 h1, h2, h3 {
   font-family: "Georgia", serif; }
 
@@ -29,7 +42,9 @@ p {
   font-family: arial, sans-serif;
   margin-bottom: 1em; }
 
-/* helpers */
+/**
+ * Helpers 
+ */
 .left {
   float: left; }
 
@@ -41,7 +56,9 @@ p {
   margin-left: auto;
   margin-right: auto; }
 
-/* grid */
+/**
+ * Grid 
+ */
 .container {
   margin: 0 auto;
   max-width: 1200px;
@@ -86,6 +103,22 @@ p {
   .col-12 {
     width: 8.33333%; }
 
-/* site-header */
-/* site-footer */
-/* site-footer */
+/** 
+ * Site-header 
+ */
+/** 
+ * Site-footer 
+ */
+/** 
+ * Site-footer 
+ */
+/**
+ * Components
+ */
+.button {
+  background: #ddd;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  padding: 1rem 2rem; }

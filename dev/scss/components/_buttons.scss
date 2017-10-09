@@ -1,0 +1,7 @@
+.button {
+    background: #ddd;
+    display: inline-block;
+    font-weight: bold;
+    text-decoration: none;
+    @include rem('padding', 10, 20);
+}

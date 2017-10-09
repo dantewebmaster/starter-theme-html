@@ -1,11 +1,19 @@
-/* vars */
+/**
+ * Vars 
+ */
 $main_font: 'Arial', sans-serif;
 $heading_font: 'Georgia', serif;
 
-/* defaults */
+/**
+ * Mixins
+ */
+@import "mixins";
+
+/**
+ * Defaults 
+ */
 *, *:before, *:after {
-    -webkit-box-sizing: border-box;
-        box-sizing: border-box; 
+    box-sizing: border-box; 
 }
 body {
     font-family: $main_font;
@@ -25,7 +33,9 @@ img {
     width: 100%;
 }
 
-/* typography */
+/**
+ * Typography 
+ */
 h1, h2, h3 {
     font-family: $heading_font;
 }
@@ -34,7 +44,9 @@ p {
     margin-bottom: 1em;
 }
 
-/* helpers */
+/**
+ * Helpers 
+ */
 .left {
     float: left;
 }
@@ -47,14 +59,27 @@ p {
     margin-right: auto;
 }
 
-/* grid */
+/**
+ * Grid 
+ */
 @import "grid";
 
-/* site-header */
+/** 
+ * Site-header 
+ */
 @import "site-header";
 
-/* site-footer */
+/** 
+ * Site-footer 
+ */
 @import "site-content";
 
-/* site-footer */
+/** 
+ * Site-footer 
+ */
 @import "site-footer";
+
+/**
+ * Components
+ */ 
+@import "components/buttons";
