@@ -29,4 +29,5 @@ This is a starter theme with all my initial setup for static HTML projects. Requ
 * gulp-notify
 
 ### Changelog
+**21/10/2017 - v1.1.2** - Novos mixins, grid flexbox, acessibilidade melhorada e menu mobile criado.
 **26/09/2017 - v1.0.2** - Adicionado notificações de erro/sucesso ao compilar arquivo sass.

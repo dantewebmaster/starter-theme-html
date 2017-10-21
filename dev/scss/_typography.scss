@@ -1,0 +1,83 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #333;
+	font-family: $main_font;
+	@include font-size(14px);
+	line-height: 1.2;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote {
+	margin: 0 1.5em;
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	background: #ddd;
+	font-family: consolas;
+	@include font-size(12px);
+	line-height: 1.2;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+code, kbd, tt, var {
+	font-family: consolas;
+	@include font-size(12px);
+}
+abbr, acronym {
+	border-bottom: 1px dotted #ddd;
+	cursor: help;
+}
+mark, ins {
+	background: yellow;
+	text-decoration: none;
+}
+big {
+	font-size: 125%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	margin: 0;
+}
+
+h1 {
+	color: #9d9b9a;
+	@include font-size(24px);
+	font-weight: 400;
+	padding: 20px 0;
+	text-align: center;
+	text-transform: uppercase;
+	@include below(480px) {
+		@include font-size(18px);
+	}
+}
+h3 {
+	color: $main_color;
+	@include font-size(20px);
+}
+h4 {
+	color: #b5b4b3;
+	@include font-size(20px);
+	font-weight: 400;
+}
+p {
+	color: #585959;
+	@include font-size(18px);
+	font-weight: 300;
+	clear: both;
+	line-height: 1.4;
+	margin: 2em 0 1.5em;
+	width: 100%;
+	@include below(480px) {
+		@include font-size(14px);
+	}
+}

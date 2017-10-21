@@ -1,0 +1,132 @@
+.site-header {
+	position: relative;
+}
+.main-navigation {
+	float: left;
+	width: 100%;
+	@include below(880px) {
+		margin: 0;
+		width: 100%;
+	}
+	ul {
+		background: #fff;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		width: 100%;
+		z-index: 100;
+		@include soft-transition(0, all, 0.5s);
+		@include below(880px) {
+			left: 0;
+			position: absolute;
+			top: -300%;
+			visibility: hidden;
+		}
+	}
+
+	li {
+		float: left;
+		position: relative;
+		&:last-child a {
+			padding-right: 0;
+		}
+		&.current-menu-item a {
+			color: #111;
+		}
+		@include below(880px) {
+			border-top: 1px solid #ddd;
+			width: 100%;
+			&:first-child {
+				border-top: 0;
+			}
+		}
+	}
+
+	a {
+		color: $gray_color;
+		display: block;
+		font-weight: 700;
+		padding: 0 1.8rem;
+		text-decoration: none;
+		text-transform: uppercase;
+		&:hover, &:focus {
+			color: #111;
+		}
+		@include below(1120px) {
+			font-size: 0.8rem;
+			padding: 0 0.8rem;
+		}
+		@include below(880px) {
+			display: block;
+			font-size: 1rem;
+			padding: 0.8rem 1.4rem;
+		}
+	}
+}
+
+/* Small menu. */
+.main-navigation.toggled ul {
+	opacity: 1;
+	overflow: hidden;
+	top: 100%;
+	visibility: visible;
+}
+.menu-toggle {
+	background: transparent;
+	border: 0;
+	border-radius: 3px;	
+	cursor: pointer;	
+	display: none;
+	height: 48px;
+	position: absolute;
+	right: 5px;
+	text-align: center;	
+	top: 17px;
+	width: 50px;
+	z-index: 1000;
+	transform: rotate(0deg);
+	transition: .3s ease-in-out;
+	span {
+		background: $main_color;
+		border-radius: 3px;
+		display: block;
+		height: 4px;
+		left: 7px;
+		opacity: 1;
+		position: absolute;
+		transform: rotate(0deg);
+		width: 35px;
+		@include soft-transition(0, all, 0.2s);
+		&:nth-child(1) { 
+			top: 12px;
+		}
+		&:nth-child(2),
+		&:nth-child(3) { 
+			top: 22px
+		}
+		&:nth-child(4) {
+			top: 32px;
+		}
+	}
+	&[aria-expanded="true"] {
+		span:nth-child(1) {
+			left: 50%;
+			top: 18px;
+			width: 0%;
+		}
+		span:nth-child(2) {
+			transform: rotate(45deg);
+		}
+		span:nth-child(3) { 
+			transform: rotate(-45deg);
+		}
+		span:nth-child(4) {
+			left: 50%;
+			top: 18px;
+			width: 0%;
+		}
+	}
+	@include below(880px) {
+		display: block;
+	}
+}

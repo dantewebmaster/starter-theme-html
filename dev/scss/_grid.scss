@@ -1,31 +1,23 @@
-$row_margin: -10px;
-$col_padding: 5px;
-
 .container {
-    margin: 0 auto;
-    max-width: 1200px;
-    padding-left: 10px;
-    padding-right: 10px;
+	margin: 0 auto;
+	max-width: 1185px;
 }
-.row {
-    clear: both;
-    float: left;
-    margin-left: $row_margin;
-    margin-right: $row_margin;
-    width: 100%;
-}
-.col {
-    display: block;
-    float: left;
-    min-height: 1px;
-    padding-left: $col_padding;
-    padding-right: $col_padding;
-    
-    @for $col from 1 through 12 {
-        $width: percentage(1 / $col);
-
-        &-#{$col} {
-            width: $width;
-        }
-    }
+.flex-row {
+	display: flex;
+	flex-wrap: wrap;
+	@include below(480px) {
+		display: block;
+	}
+	.col {
+		flex: 1;
+		&-3 {
+			width: (100% / 3);
+			@include below(480px) {
+				width: 100%;
+			}
+		}
+		@include below(480px) {
+			width: 100%;
+		}
+	}
 }

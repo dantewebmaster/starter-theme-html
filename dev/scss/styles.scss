@@ -4,6 +4,9 @@
 $main_font: 'Arial', sans-serif;
 $heading_font: 'Georgia', serif;
 
+$main_color: #9d270e;
+$gray_color: #9d9b9a;
+
 /**
  * Mixins
  */
@@ -34,30 +37,19 @@ img {
 }
 
 /**
+ * Accessibility 
+ */
+@import "accessibility";
+
+/**
  * Typography 
  */
-h1, h2, h3 {
-    font-family: $heading_font;
-}
-p {
-    font-family: arial, sans-serif;
-    margin-bottom: 1em;
-}
+@import "typography";
 
 /**
  * Helpers 
  */
-.left {
-    float: left;
-}
-.right {
-    float: right;
-}
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+@import "helpers";
 
 /**
  * Grid 
@@ -82,4 +74,6 @@ p {
 /**
  * Components
  */ 
+@import "components/forms";
 @import "components/buttons";
+@import "components/media";
