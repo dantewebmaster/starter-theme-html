@@ -70,8 +70,8 @@ h4 {
 	font-weight: 400;
 }
 p {
-	color: #585959;
-	@include font-size(18px);
+	color: $paragraph_color;
+	@include font-size(14px);
 	font-weight: 300;
 	clear: both;
 	line-height: 1.4;

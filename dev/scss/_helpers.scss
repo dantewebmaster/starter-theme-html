@@ -15,3 +15,8 @@
 .clearfix {
 	@include clearfix;
 }
+
+
+.text-uppercase {
+	text-transform: uppercase;
+}

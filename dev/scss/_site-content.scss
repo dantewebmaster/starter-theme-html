@@ -1,0 +1,30 @@
+.homeslider {
+	background: transparent url(../images/slider-placeholder.png) center no-repeat;
+	background-size: cover;
+	float: left;
+	min-height: 350px;
+	width: 100%;
+}
+
+.site-content {
+	margin: 0;
+	padding: 0;
+}
+
+.section {
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	.section-title {
+		color: #fff;
+		font-weight: 600;
+		margin-bottom: 2rem;
+		@include font-size(16px);
+	}
+
+	&.enquiry {
+		background: $main_color;
+		padding: 2rem 0;
+	}
+}
