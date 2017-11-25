@@ -38,23 +38,52 @@ select {
 }
 
 .enquiry-form {
-	max-width: 800px;
+	max-width: 900px;
+	
+	.form-item {
+		display: inline-block;
+	}
+
+	input[type="checkbox"] {
+		opacity: 0;
+		&:hover + label:before,
+		&:checked + label:before {
+			background: #fff;
+		}
+	}
 	label {
 		color: #fff;
+		cursor: pointer;
 		display: inline-block;
-		padding: 0 1rem;
+		line-height: 14px;		
+		padding: 0;
+		text-transform: uppercase;
+		@include font(10, 600);
+		&:before {
+			background: transparent;
+			border: 1px solid #fff;
+			content: "";
+			display: inline-block;
+			float: left;
+			height: 14px;
+			margin-right: 5px;
+			width: 14px;
+			@include soft-transition;
+		}
 	}
+	
 	input[type="text"] {
 		background: transparent url(../images/input-shadow.png) center bottom no-repeat;
 		border: 0;
 		box-shadow: none;
 		color: #fff;
-		height: 50px;
+		height: 45px;
 		margin-top: 2rem;
 		text-align: center;
 	}
 	::placeholder {
 		color: #fff;
+		font-size: 12px;
 		opacity: 1;
 		text-align: center;
 	}

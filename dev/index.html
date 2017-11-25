@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Planner - HTML</title>
+    <title>Homepage Planner - HTML</title>
     <!--build:css css/styles.min.css-->
     <link rel="stylesheet" href="css/lib/reset.css">
     <link rel="stylesheet" href="css/lib/normalize.css">
@@ -51,42 +51,105 @@
             <section class="section enquiry text-center">
 				<h2 class="section-title text-uppercase">Consulta de Títulos</h2>
 				<form class="enquiry-form center" action="">
-					<label for="">
-						<input type="checkbox" name="" id="">
-						<span>Debêntures</span>
-					</label>
-					<label for="">
-						<input type="checkbox" name="" id="">
-						<span>CRI</span>
-					</label>
-					<label for="">
-						<input type="checkbox" name="" id="">
-						<span>CRA</span>
-					</label>
-					<label for="">
-						<input type="checkbox" name="" id="">
-						<span>Letras Financeiras</span>
-					</label>
-					<label for="">
-						<input type="checkbox" name="" id="">
-						<span>Notas Promissórias</span>
-					</label>
-					<label for="">
-						<input type="checkbox" name="" id="">
-						<span>Lei 12.431</span>
-					</label>
+					<div class="form-item">
+						<input type="checkbox" name="" id="debentures">
+						<label for="debentures">Debêntures</label>
+					</div>
+					
+					<div class="form-item">
+						<input type="checkbox" name="" id="cri">
+						<label for="cri">CRI</label>
+					</div>
+
+					<div class="form-item">
+						<input type="checkbox" name="" id="cra">
+						<label for="cra">CRA</label>
+					</div>
+
+					<div class="form-item">
+						<input type="checkbox" name="" id="letras-financeiras">
+						<label for="letras-financeiras">Letras Financeiras</label>
+					</div>
+
+					<div class="form-item">
+						<input type="checkbox" name="" id="notas-promissorias">
+						<label for="notas-promissorias">Notas Promissórias</label>
+					</div>
+
+					<div class="form-item">
+						<input type="checkbox" name="" id="lei">
+						<label for="lei">Lei 12.341</label>
+					</div>
+
 					<input type="text" name="" id="" placeholder="digite o emissor ou código do ativo">
 				</form>				
-            </section>
+			</section>
+			
+			<section class="section home-blocks">
+				<div class="block indexes">
+					<div class="block-header text-center">
+						<img class="block-icon" src="images/icon-indexes.png" alt="Taxas e Índices">
+						<h2 class="block-title text-uppercase">Taxas e Índices</h2>
+					</div>
+					<div class="block-content center">
+						<ul>
+							<li class="index-item">
+								<h3>CDI</h3>
+								<p>8,14% para 09/10/2017</p>
+							</li>
+							<li class="index-item">
+								<h3>IPCA</h3>
+								<p>4.860,83 (0,16%) para Setembro/2017</p>
+							</li>
+							<li class="index-item">
+								<h3>IPCA (Projeção ANBIMA)</h3>
+								<p>4.860,83 (0,16%) para Setembro/2017</p>
+							</li>
+							<li class="index-item">
+								<h3>IGPM</h3>
+								<p>647,400 (0,47%) para Setembro/2017</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="block informative">
+					<div class="block-header text-center">
+						<img class="block-icon" src="images/icon-files.png" alt="Informativos">
+						<h2 class="block-title text-uppercase">Informativos</h2>
+					</div>
+					<div class="block-content center">
+						<ul>
+
+						</ul>
+						<a href="#" class="button read-more text-lowercase">Ver mais</a>
+					</div>
+				</div>
+
+				<div class="block events">
+					<div class="block-header text-center">
+						<img class="block-icon" src="images/icon-calendar.png" alt="Eventos do Dia">
+						<h2 class="block-title text-uppercase">Eventos do Dia</h2>
+					</div>
+					<div class="block-content center">
+						<ul>
+							
+						</ul>
+						<a href="#" class="button read-more text-lowercase">Ver mais</a>
+					</div>
+				</div>
+			</section>
 
         </main>
     </div>
 
     <footer id="colophon" class="site-footer" role="content-info">
         <div class="container">
-            <div class="flex-row">
-                <div class="col"><span>Starter Theme</span></div>
-                <div class="col"><span class="right">by Dante Webmaster</span></div>
+            <div class="row">
+                <div class="col-12 text-center">
+					<p class="copyright">© Copyright 2017. Todos os direitos reservados</p>
+					<a href="#"><img src="images/footer-logo.png" alt="Planner"></a>
+				</div>
             </div>
         </div>
     </footer>

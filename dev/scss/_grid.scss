@@ -4,12 +4,11 @@
     margin-right: auto;
     max-width: $container_width;
     padding-left: $grid-gutter;
-    padding-right: $grid-gutter;
+	padding-right: $grid-gutter;
 }
 .row {
     margin-left: -grid-gutter;
 	margin-right: -grid-gutter;
-	@include clearfix;
 }
 [class*="col-"] {
     display: block;

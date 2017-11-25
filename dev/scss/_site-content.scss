@@ -20,11 +20,60 @@
 		color: #fff;
 		font-weight: 600;
 		margin-bottom: 2rem;
-		@include font(16);
+		@include font(16, 700);
 	}
 
 	&.enquiry {
 		background: $main_color;
 		padding: 2rem 0;
+	}
+
+	&.home-blocks {
+		background: transparentize($gray_color, 0.2);
+		.block {
+			float: left;
+			min-height: 400px;
+			overflow: hidden;
+			padding: 2rem;
+			position: relative;
+			width: (100% / 3);
+			.block-title {
+				color: $main_color;
+				margin: 1rem auto 2rem;
+				@include font(14, 700);
+			}
+
+			.block-content {
+				max-width: 350px;
+			}
+
+			&.indexes {
+				background: rgba(#000, 0.1);
+				.index-item {
+					margin-bottom: 1.5rem;
+					h3 {
+						color: $main_color;
+						margin: 0;
+						@include font(14, 700);
+					}
+					p {
+						color: #fff;
+						font-weight: 400;
+						margin: 0;
+					}
+				}
+			}
+
+			&.informative {
+				background: rgba(#000, 0.05);
+			}
+
+			.read-more {
+				bottom: 0;
+				margin-left: -50px;		
+				position: absolute;
+				left: 50%;				
+			}
+		}
 	}
 }

@@ -12,11 +12,31 @@
 .text-center {
 	text-align: center;
 }
-.clearfix {
-	@include clearfix;
+.text-right {
+	text-align: right;
 }
-
 
 .text-uppercase {
 	text-transform: uppercase;
+}
+.text-lowercase {
+	text-transform: lowercase;
+}
+
+.clearfix {
+	@include clearfix;
+}
+.only-mobile {
+	display: none;
+}
+.hidden {
+	display: none;
+}
+@include below(660px) {
+	.hidden-xs {
+		display: none;
+	}
+	.only-mobile {
+		display: block;
+	}
 }

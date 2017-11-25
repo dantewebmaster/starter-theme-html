@@ -20,3 +20,20 @@ input[type="submit"] {
 		color: #111;
 	}
 }
+
+.read-more {
+	background: $secondary_color;
+	border-radius: 50% 50% 0 0;
+	color: #fff;
+	height: 80px;
+	margin-bottom: -50px;
+	padding-top: 10px;
+	text-align: center;
+	text-decoration: none;
+	width: 100px;
+	@include font(12, 700);
+	@include soft-transition;
+	&:hover {
+		background: #000;
+	}
+}

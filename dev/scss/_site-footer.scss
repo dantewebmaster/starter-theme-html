@@ -1,0 +1,7 @@
+.site-footer {
+	width: 100%;
+	.copyright {
+		color: $main_color;
+		@include font(12,400);
+	}
+}
