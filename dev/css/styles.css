@@ -4,14 +4,6 @@
 /**
  * Mixins
  */
-/* below width media querie */
-/* default pseudo style */
-/* css triangle */
-/* REM units with pixel fallback */
-/* REM font-size with px fallback */
-/* Center block */
-/* Clearfix */
-/* Soft transition elements */
 /**
  * Defaults 
  */
@@ -39,26 +31,22 @@ img {
 /**
  * Accessibility 
  */
-/* Text meant only for screen readers. */
+/* Text meant only for screen readers */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
   height: 1px;
   width: 1px;
   overflow: hidden;
-  word-wrap: normal !important;
-  /* Many screen reader and browser combinations announce broken words as they would appear visually. */ }
+  word-wrap: normal !important; }
   .screen-reader-text:focus {
-    background-color: #ddd;
+    background-color: #fff;
     border-radius: 3px;
-    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
     clip: auto !important;
     color: #004b88;
     display: block;
-    font-size: 14px;
-    font-size: 0.875rem;
-    font-weight: bold;
     height: auto;
     left: 5px;
     line-height: normal;
@@ -67,9 +55,12 @@ img {
     top: 5px;
     width: auto;
     z-index: 100000;
-    /* Above WP toolbar. */ }
+    /* Above WP toolbar. */
+    font-size: 14px;
+    font-size: 0.875/pxrem;
+    font-weight: 700; }
 
-/* Do not show the outline on the skip link target. */
+/* Do not show the outline on the skip link target */
 #content[tabindex="-1"]:focus {
   outline: 0; }
 
@@ -84,9 +75,10 @@ optgroup,
 textarea {
   color: #333;
   font-family: "Open Sans", sans-serif;
+  line-height: 1.2;
   font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.2; }
+  font-size: 0.875/pxrem;
+  font-weight: normal; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -100,18 +92,20 @@ address {
 pre {
   background: #ddd;
   font-family: consolas;
-  font-size: 12px;
-  font-size: 0.75rem;
   line-height: 1.2;
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
-  padding: 1.6em; }
+  padding: 1.6em;
+  font-size: 12px;
+  font-size: 0.75/pxrem;
+  font-weight: normal; }
 
 code, kbd, tt, var {
   font-family: consolas;
   font-size: 12px;
-  font-size: 0.75rem; }
+  font-size: 0.75/pxrem;
+  font-weight: normal; }
 
 abbr, acronym {
   border-bottom: 1px dotted #ddd;
@@ -130,41 +124,46 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   color: #9d9b9a;
-  font-size: 24px;
-  font-size: 1.5rem;
   font-weight: 400;
   padding: 20px 0;
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-size: 24px;
+  font-size: 1.5/pxrem;
+  font-weight: normal; }
   @media screen and (max-width: 480px) {
     h1 {
       font-size: 18px;
-      font-size: 1.125rem; } }
+      font-size: 1.125/pxrem;
+      font-weight: normal; } }
 
 h3 {
   color: #004b88;
   font-size: 20px;
-  font-size: 1.25rem; }
+  font-size: 1.25/pxrem;
+  font-weight: normal; }
 
 h4 {
   color: #b5b4b3;
+  font-weight: 400;
   font-size: 20px;
-  font-size: 1.25rem;
-  font-weight: 400; }
+  font-size: 1.25/pxrem;
+  font-weight: normal; }
 
 p {
   color: #595959;
-  font-size: 14px;
-  font-size: 0.875rem;
-  font-weight: 300;
   clear: both;
   line-height: 1.4;
   margin: 2em 0 1.5em;
-  width: 100%; }
+  width: 100%;
+  font-size: 14px;
+  font-size: 0.875/pxrem;
+  font-weight: 300; }
   @media screen and (max-width: 480px) {
     p {
       font-size: 14px;
-      font-size: 0.875rem; } }
+      font-size: 0.875/pxrem;
+      font-weight: normal; } }
 
 /**
  * Helpers 
@@ -183,10 +182,10 @@ p {
 .text-center {
   text-align: center; }
 
-.clearfix::after {
-  display: block;
+.clearfix {
   content: "";
-  clear: both; }
+  display: table;
+  table-layout: fixed; }
 
 .text-uppercase {
   text-transform: uppercase; }
@@ -204,11 +203,10 @@ p {
 
 .row {
   margin-left: -grid-gutter;
-  margin-right: -grid-gutter; }
-  .row::after {
-    display: block;
-    content: "";
-    clear: both; }
+  margin-right: -grid-gutter;
+  content: "";
+  display: table;
+  table-layout: fixed; }
 
 [class*="col-"] {
   display: block;
@@ -480,7 +478,8 @@ p {
     font-weight: 600;
     margin-bottom: 2rem;
     font-size: 16px;
-    font-size: 1rem; }
+    font-size: 1/pxrem;
+    font-weight: normal; }
   .section.enquiry {
     background: #004b88;
     padding: 2rem 0; }
@@ -556,6 +555,7 @@ select {
     -webkit-box-shadow: none;
     box-shadow: none;
     color: #fff;
+    height: 50px;
     margin-top: 2rem;
     text-align: center; }
   .enquiry-form ::-webkit-input-placeholder {
@@ -586,7 +586,8 @@ input[type="submit"] {
   padding: 0.5rem 1rem;
   text-transform: uppercase;
   font-size: 14px;
-  font-size: 0.875rem; }
+  font-size: 0.875/pxrem;
+  font-weight: normal; }
   button:hover, button:active, button:focus,
   input[type="button"]:hover,
   input[type="button"]:active,
