@@ -31,7 +31,7 @@ $grid_columns: 12;
  * Defaults 
  */
 *, *:before, *:after {
-    box-sizing: border-box; 
+	box-sizing: border-box;
 }
 body {
     font-family: $main_font;
@@ -42,6 +42,13 @@ figure {
 img {
     height: auto;
     max-width: 100%;
+}
+a {
+	text-decoration: none;
+	@include soft-transition;
+	&:hover {
+		color: #000;
+	}
 }
 .site-header,
 .site-content,

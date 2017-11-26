@@ -35,5 +35,6 @@ input[type="submit"] {
 	@include soft-transition;
 	&:hover {
 		background: #000;
+		color: #fff;
 	}
 }
