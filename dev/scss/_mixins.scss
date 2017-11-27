@@ -5,6 +5,12 @@
     }
 }
 
+@mixin between($max_width, $min_width) {
+	@media screen and (max-width: $max_width) and (min-width: $min_width) {
+		@content;
+	}
+}
+
 // default pseudo style 
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
     content: $content;

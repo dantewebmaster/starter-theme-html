@@ -37,6 +37,9 @@
 			padding: 2rem 2rem 0;
 			position: relative;
 			width: (100% / 3);
+			@include below($small_breackpoint) {
+				width: 100%;
+			}
 			.block-title {
 				color: $main_color;
 				margin: 1rem auto 1.6rem;
@@ -51,6 +54,9 @@
 					margin: 1.6rem 0;
 					@include below(1140px) {
 						margin: 0.8rem 0;
+					}
+					@include below(880px) {
+						margin: 0.4rem 0;
 					}
 				}
 			}
@@ -70,6 +76,9 @@
 					p {
 						font-weight: 400;
 						margin: 0;
+						@include between(880px, $small_breackpoint) {
+							font-size: 10px;
+						}
 					}
 				}
 			}
@@ -88,9 +97,20 @@
 						color: $main_color;
 						font-weight: 700;
 						width: 25%;
+						@include between(880px, $small_breackpoint) {
+							font-size: 10px;
+						}
 					}
 					.text {
+						color: #fff;
+						padding: 0 0.5rem;
 						width: 65%;
+						@include below(960px) {
+							width: 70%;
+						}
+						&:hover {
+							color: #000;
+						}
 					}
 				}
 			}
@@ -110,10 +130,16 @@
 					.type, .code, .event {
 						display: inline-block;
 						padding: 0 1rem;
+						@include below(880px) {
+							padding: 0 0.3rem;
+						}
 					}
 					.type {
 						color: $main_color;
 						@include font(12, 700);
+						&:hover {
+							color: #000;
+						}
 					}
 				}
 				.show-labels {

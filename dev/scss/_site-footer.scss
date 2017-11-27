@@ -13,14 +13,29 @@
 	.custom-menus {
 		float: left;
 		width: 75%;
+		@include below(490px) {
+			width: 100%;
+		}
 		.widget {
 			padding: 0 0.5rem;
 			width: 16%;
+			@include below(860px) {
+				float: right;
+				width: 30%;
+			}
+			@include below(570px) {
+				width: 50%;
+			}
 		}
 	}
 	.address {
 		float: right;
+		margin-top: 0.8rem;
 		width: 25%;
+		@include below(490px) {
+			padding: 2rem;
+			width: 100%;
+		}
 		p {
 			color: $main_color;
 			margin: 0;
@@ -37,7 +52,7 @@
 	display: inline-block;
 	vertical-align: top;
 	.widget-title {
-		margin-bottom: 0.8rem;
+		margin: 0.8rem 0;
 		text-transform: uppercase;
 		@include font(12, 700);
 	}

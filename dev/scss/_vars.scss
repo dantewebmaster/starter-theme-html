@@ -1,0 +1,23 @@
+// typography
+$main_font: 'Open Sans', sans-serif;
+$heading_font: 'Open Sans', sans-serif;
+
+$base_font_size: 16px;
+$heading_size: 30;
+$paragraph_size: 14;
+
+// colors
+$main_color: #004b88;
+$secondary_color: #ed1c24;
+$gray_color: #adafb2;
+$heading_color: $main_color;
+$paragraph_color: #595959;
+
+// grid
+$container_width: 1185px;
+$grid_gutter: 10px;
+$grid_columns: 12;
+$small_breackpoint: 780px;
+$extra_small_breackpoint: 540px;
+
+$menu_mobile_breackpoint: 960px;

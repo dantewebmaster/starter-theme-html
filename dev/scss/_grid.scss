@@ -21,14 +21,14 @@
 		width: 100% / $grid-columns * $i
 	}
 }
-@include below(660px) {
+@include below($small_breackpoint) {
 	@for $i from 1 through $grid-columns {
 		.col-sm-#{$i} {
 			width: 100% / $grid-columns * $i
 		}
 	}
 }
-@include below(540px) {
+@include below($extra_small_breackpoint) {
 	@for $i from 1 through $grid-columns {
 		.col-xs-#{$i} {
 			width: 100% / $grid-columns * $i
