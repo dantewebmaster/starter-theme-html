@@ -1,5 +1,5 @@
 .site-header {
-	margin: 1rem 0 0.5rem;
+	margin: 1rem 0 0;
 	position: relative;
 }
 .main-navigation {
@@ -10,6 +10,15 @@
 	width: 100%;
 	@include below($menu_mobile_breackpoint) {
 		margin: 0;
+		width: 100%;
+	}
+	&:before {
+		background: rgba(#000, 0.7);
+		content: "";
+		min-height: 350px;
+		position: absolute;
+		right: 0;
+		top: 100%;
 		width: 100%;
 	}
 	ul {
@@ -44,6 +53,41 @@
 				border-top: 0;
 			}
 		}
+
+		.sub-menu {
+			background: transparent;
+			left: 0;
+			opacity: 0;
+			padding: 5rem 1rem;
+			position: absolute;
+			top: 100%;
+			visibility: hidden;
+			width: 200px;
+			&:before {
+				left: 20px;
+				top: 20px;
+				@include css-triangle(#fff, down, 16px, absolute, false);
+			}
+			li {
+				display: block;
+				text-align: left;
+				width: 100%;
+			}
+			a {
+				color: #fff;
+				padding: 0.5rem 0;
+				text-transform: none;
+				@include font(18, 300);
+			}
+		}
+		&.menu-item-has-children {
+			&:hover {
+				> .sub-menu {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
 	}
 
 	a {
@@ -54,7 +98,7 @@
 		text-decoration: none;
 		text-transform: uppercase;
 		&:hover, &:focus {
-			color: #111;
+			color: $secondary_color;
 		}
 		@include below(1120px) {
 			font-size: 0.8rem;

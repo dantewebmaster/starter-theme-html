@@ -42,7 +42,7 @@
 			}
 			.block-title {
 				color: $main_color;
-				margin: 1rem auto 1.6rem;
+				margin: 1rem auto 1.4rem;
 				@include font(14, 700);
 			}
 
@@ -118,14 +118,19 @@
 			&.events {
 				.today {
 					color: $secondary_color;
+					display: block;
+					margin-bottom: 1rem;
 					@include font(12, 700);
 				}
 				.event-item {
+					border-top: 1px solid #fff;
+					margin: 0 auto;
+					max-width: 260px;
+					&:last-child {
+						border-bottom: 1px solid #fff;
+					}
 					p {
-						margin: 0.8rem 0;
-						@include below(1140px) {
-							margin: 0.3rem 0;
-						}
+						margin: 0.3rem 0;
 					}
 					.type, .code, .event {
 						display: inline-block;
