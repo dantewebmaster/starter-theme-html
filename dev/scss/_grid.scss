@@ -1,42 +1,7 @@
-/* Crossbrowser grid */
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: $container_width;
-    padding-left: $grid-gutter;
-	padding-right: $grid-gutter;
+	margin: 0 auto;
+	max-width: 1185px;
 }
-.row {
-    margin-left: -grid-gutter;
-	margin-right: -grid-gutter;
-}
-[class*="col-"] {
-    display: block;
-	float: left;
-    min-height: 1px;
-	padding: 0 $grid-gutter;;
-}
-@for $i from 1 through $grid-columns {
-	.col-#{$i} {
-		width: 100% / $grid-columns * $i
-	}
-}
-@include below($small_breackpoint) {
-	@for $i from 1 through $grid-columns {
-		.col-sm-#{$i} {
-			width: 100% / $grid-columns * $i
-		}
-	}
-}
-@include below($extra_small_breackpoint) {
-	@for $i from 1 through $grid-columns {
-		.col-xs-#{$i} {
-			width: 100% / $grid-columns * $i
-		}
-	}
-}
-
-/* flex grid */
 .flex-row {
 	display: flex;
 	flex-wrap: wrap;

@@ -1,26 +1,17 @@
-// below width media querie
+/* below width media querie */ 
 @mixin below($width) {
-    @media screen and (max-width: $width) {
-        @content;
-    }
-}
-
-@mixin between($max_width, $min_width) {
-	@media screen and (max-width: $max_width) and (min-width: $min_width) {
+	@media screen and (max-width: $width) {
 		@content;
 	}
 }
 
-// default pseudo style 
+/* default pseudo style */ 
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
-    content: $content;
-    display: $display;
-    position: $pos;
+	content: $content;
+	display: $display;
+	position: $pos;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 /* css triangle */ 
 @mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false){
 	@include pseudo($pos: $position);
@@ -50,122 +41,57 @@
 		border-right: $size solid $color;
 		margin-left: -$size;
 	}
-=======
-//  css triangle
-@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false){
-=======
-//  css triangle
-@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
->>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
-=======
-//  css triangle
-@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
->>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
-    @include pseudo($pos: $position);
-    width: 0;
-    height: 0;
-    @if $round {
-        border-radius: 3px;
-    }
-    @if $direction == down {
-        border-left: $size solid transparent;
-        border-right: $size solid transparent;
-        border-top: $size solid $color;
-        margin-top: 0 - round( $size / 2.5 );
-    } @else if $direction == up {
-        border-left: $size solid transparent;
-        border-right: $size solid transparent;
-        border-bottom: $size solid $color;
-        margin-bottom: 0 - round( $size / 2.5 );
-    } @else if $direction == right {
-        border-top: $size solid transparent;
-        border-bottom: $size solid transparent;
-        border-left: $size solid $color;
-        margin-right: -$size;
-    } @else if  $direction == left {
-        border-top: $size solid transparent;
-        border-bottom: $size solid transparent;
-        border-right: $size solid $color;
-        margin-left: -$size;
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of d7757cc... Submenu criado
-=======
->>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
-=======
->>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
 }
 
-// REM units with pixel fallback
+/* REM units with pixel fallback */
 @mixin rem($property, $values...) {
-    $n: length($values);
-    $i: 1;
-
-    $pxlist: ();
-    $remlist: ();
-
-    @while $i <= $n {
-        $itemVal: (nth($values, $i));
-        @if $itemVal != "auto"{
-            $pxlist: append($pxlist, $itemVal + px);
-            $remlist: append($remlist, ($itemVal / 10) + rem);
-        }@else{
-            $pxlist: append($pxlist, auto);
-            $remlist: append($remlist, auto);
-        }
-   
-        $i: $i + 1;
-    }
-
-    #{$property}: $pxlist;
-    #{$property}: $remlist;
-<<<<<<< HEAD
+	$n: length($values);
+	$i: 1;
+	
+	$pxlist: ();
+	$remlist: ();
+	
+	@while $i <= $n {
+		$itemVal: (nth($values, $i));
+		@if $itemVal != "auto"{
+			$pxlist: append($pxlist, $itemVal + px);
+			$remlist: append($remlist, ($itemVal / 10) + rem);
+		}@else{
+			$pxlist: append($pxlist, auto);
+			$remlist: append($remlist, auto);
+		}
+		
+		$i: $i + 1;
+	}
+	
+	#{$property}: $pxlist;
+	#{$property}: $remlist;
 }
 
-// Font
-@mixin font($pixels, $weight : normal) {
-	font-size: $pixels + px;
-	font-size: ( $pixels / $base_font_size ) + rem;
-	font-weight: $weight;
+/* REM font-size with px fallback */ 
+@mixin font-size($size) {
+	font-size: $size; // Fallback in px.
+	font-size: ($size / 16px) * 1rem;
 }
 
-@mixin soft-transition($delay: 0, $duration: 0.3s, $property: all, $time-function: ease-in-out) {
-	transition: $property $duration $time-function;
-	transition-delay: $delay;
-}
-
-=======
-}
-
-// Font
-@mixin font($pixels, $weight : normal) {
-	font-size: $pixels + px;
-	font-size: ( $pixels / $base_font_size ) + rem;
-	font-weight: $weight;
-}
-
-@mixin soft-transition($delay: 0, $duration: 0.3s, $property: all, $time-function: ease-in-out) {
-	transition: $property $duration $time-function;
-	transition-delay: $delay;
-}
-
->>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
-// Center block
+/* Center block */
 @mixin center-block {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-// Clearfix
+/* Clearfix */
 @mixin clearfix() {
-	content: "";
-	display: table;
-	table-layout: fixed;
+	&::after {
+		display: block;
+		content: "";
+		clear: both;
+	}
 }
 
-// Clear after (not all clearfix need this also)
-@mixin clearfix-after() {
-	clear: both;
+/* Soft transition elements */
+@mixin soft-transition($delay: 0, $duration: 0.3s, $property: all, $time-function: ease-in-out) {
+	transition: $property $duration $time-function;
+	transition-delay: $delay;
 }

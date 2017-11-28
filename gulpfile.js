@@ -15,6 +15,7 @@ var runSequence = require('run-sequence');
 /**
  * Development Tasks
  */ 
+
 // Start browserSync server
 gulp.task('browserSync', function () {
     browserSync({
@@ -26,11 +27,13 @@ gulp.task('browserSync', function () {
 
 gulp.task('sass', function () {
     return gulp.src('dev/scss/**/*.scss') // Gets all files ending with .scss in dev/scss and children dirs
+        .pipe(plumber(plumberErrorHandler))
         .pipe(sass().on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
+        .pipe(notify(onSuccessMessage))  
         .pipe(gulp.dest('dev/css')) // Outputs it in the css folder
         .pipe(browserSync.reload({ // Reloading with Browser Sync
             stream: true
@@ -47,6 +50,7 @@ gulp.task('watch', function () {
 /**
  * Optimization Tasks
  */  
+
 // Optimizing CSS and JavaScript 
 gulp.task('useref', function () {
 
@@ -88,6 +92,7 @@ gulp.task('clean:dist', function () {
 /**
  * Build Sequences
  */
+
 gulp.task('default', function (callback) {
     runSequence(['sass', 'browserSync'], 'watch',
         callback
