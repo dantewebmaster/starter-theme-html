@@ -20,6 +20,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* css triangle */ 
 @mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false){
 	@include pseudo($pos: $position);
@@ -56,6 +57,10 @@
 //  css triangle
 @mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
 >>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
+=======
+//  css triangle
+@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
+>>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
     @include pseudo($pos: $position);
     width: 0;
     height: 0;
@@ -84,7 +89,10 @@
         margin-left: -$size;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of d7757cc... Submenu criado
+=======
+>>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
 =======
 >>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
 }
@@ -112,6 +120,7 @@
 
     #{$property}: $pxlist;
     #{$property}: $remlist;
+<<<<<<< HEAD
 }
 
 // Font
@@ -126,6 +135,22 @@
 	transition-delay: $delay;
 }
 
+=======
+}
+
+// Font
+@mixin font($pixels, $weight : normal) {
+	font-size: $pixels + px;
+	font-size: ( $pixels / $base_font_size ) + rem;
+	font-weight: $weight;
+}
+
+@mixin soft-transition($delay: 0, $duration: 0.3s, $property: all, $time-function: ease-in-out) {
+	transition: $property $duration $time-function;
+	transition-delay: $delay;
+}
+
+>>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
 // Center block
 @mixin center-block {
 	display: block;

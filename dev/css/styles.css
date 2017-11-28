@@ -356,9 +356,13 @@ p {
 .site-header {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   margin: 1rem 0 0.5rem;
 >>>>>>> parent of d7757cc... Submenu criado
+=======
+  margin: 1rem 0 0;
+>>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
 =======
   margin: 1rem 0 0;
 >>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
@@ -534,7 +538,10 @@ p {
  */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
 =======
 >>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
 .homeslider {
@@ -578,7 +585,11 @@ p {
       .section.home-blocks .block .block-title {
         color: #004b88;
 <<<<<<< HEAD
+<<<<<<< HEAD
         margin: 1rem auto 1.6rem;
+=======
+        margin: 1rem auto 1.4rem;
+>>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
 =======
         margin: 1rem auto 1.4rem;
 >>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
@@ -644,6 +655,7 @@ p {
       .section.home-blocks .block.events .today {
         color: #ed1c24;
 <<<<<<< HEAD
+<<<<<<< HEAD
         font-size: 12px;
         font-size: 0.75/pxrem;
         font-weight: 700; }
@@ -666,6 +678,8 @@ p {
         .section.home-blocks .block.events .event-item .type:hover {
           color: #000; }
 =======
+=======
+>>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
         display: block;
         margin-bottom: 1rem;
         font-size: 12px;
@@ -692,6 +706,9 @@ p {
           font-weight: 700; }
           .section.home-blocks .block.events .event-item .type:hover {
             color: #000; }
+<<<<<<< HEAD
+>>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
+=======
 >>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
       .section.home-blocks .block.events .show-labels {
         bottom: 0;
@@ -731,7 +748,10 @@ p {
         left: 50%; }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of d7757cc... Submenu criado
+=======
+>>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
 =======
 >>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
 /** 
