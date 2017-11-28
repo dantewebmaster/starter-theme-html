@@ -27,5 +27,5 @@ This is a starter theme with all my initial setup for static HTML projects. Requ
 * del
 
 ### Changelog
-**28/11/2017 - v1.1.4** - Gulp plumber e Gulp notify removidos.
+**28/11/2017 - v1.1.4** - Gulp plumber e Gulp notify removidos.  
 **21/10/2017 - v1.1.2** - Novos mixins, grid flexbox, acessibilidade melhorada e menu mobile criado.
