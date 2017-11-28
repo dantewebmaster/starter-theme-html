@@ -221,6 +221,10 @@ p {
  * Site-header 
  */
 .site-header {
+<<<<<<< HEAD
+=======
+  margin: 1rem 0 0.5rem;
+>>>>>>> parent of d7757cc... Submenu criado
   position: relative; }
 
 .main-navigation {
@@ -345,6 +349,169 @@ p {
 /** 
  * Site-footer 
  */
+<<<<<<< HEAD
+=======
+.homeslider {
+  background: transparent url(../images/slider-placeholder.png) center no-repeat;
+  background-size: cover;
+  float: left;
+  min-height: 350px;
+  width: 100%; }
+
+.site-content {
+  margin: 0;
+  padding: 0; }
+
+.section {
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+  .section .section-title {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-size: 16px;
+    font-size: 1/pxrem;
+    font-weight: 700; }
+  .section.enquiry {
+    background: #004b88;
+    padding: 2rem 0; }
+  .section.home-blocks {
+    background: rgba(173, 175, 178, 0.8); }
+    .section.home-blocks .block {
+      float: left;
+      min-height: 400px;
+      overflow: hidden;
+      padding: 2rem 2rem 0;
+      position: relative;
+      width: 33.33333%; }
+      @media screen and (max-width: 780px) {
+        .section.home-blocks .block {
+          width: 100%; } }
+      .section.home-blocks .block .block-title {
+        color: #004b88;
+        margin: 1rem auto 1.6rem;
+        font-size: 14px;
+        font-size: 0.875/pxrem;
+        font-weight: 700; }
+      .section.home-blocks .block .block-content {
+        max-width: 350px; }
+        .section.home-blocks .block .block-content p {
+          color: #fff;
+          font-weight: 400;
+          margin: 1.6rem 0; }
+          @media screen and (max-width: 1140px) {
+            .section.home-blocks .block .block-content p {
+              margin: 0.8rem 0; } }
+          @media screen and (max-width: 880px) {
+            .section.home-blocks .block .block-content p {
+              margin: 0.4rem 0; } }
+      .section.home-blocks .block.indexes {
+        background: rgba(0, 0, 0, 0.1); }
+        .section.home-blocks .block.indexes .index-item {
+          margin-bottom: 1.5rem; }
+          @media screen and (max-width: 1140px) {
+            .section.home-blocks .block.indexes .index-item {
+              margin-bottom: 1rem; } }
+          .section.home-blocks .block.indexes .index-item h3 {
+            color: #004b88;
+            margin: 0;
+            font-size: 14px;
+            font-size: 0.875/pxrem;
+            font-weight: 700; }
+          .section.home-blocks .block.indexes .index-item p {
+            font-weight: 400;
+            margin: 0; }
+            @media screen and (max-width: 880px) and (min-width: 780px) {
+              .section.home-blocks .block.indexes .index-item p {
+                font-size: 10px; } }
+      .section.home-blocks .block.informative {
+        background: rgba(0, 0, 0, 0.05); }
+        .section.home-blocks .block.informative .informative-item p {
+          font-size: 12px;
+          font-size: 0.75/pxrem;
+          font-weight: 400; }
+        .section.home-blocks .block.informative .informative-item .date, .section.home-blocks .block.informative .informative-item .text {
+          display: inline-block;
+          vertical-align: top; }
+        .section.home-blocks .block.informative .informative-item .date {
+          color: #004b88;
+          font-weight: 700;
+          width: 25%; }
+          @media screen and (max-width: 880px) and (min-width: 780px) {
+            .section.home-blocks .block.informative .informative-item .date {
+              font-size: 10px; } }
+        .section.home-blocks .block.informative .informative-item .text {
+          color: #fff;
+          padding: 0 0.5rem;
+          width: 65%; }
+          @media screen and (max-width: 960px) {
+            .section.home-blocks .block.informative .informative-item .text {
+              width: 70%; } }
+          .section.home-blocks .block.informative .informative-item .text:hover {
+            color: #000; }
+      .section.home-blocks .block.events .today {
+        color: #ed1c24;
+        font-size: 12px;
+        font-size: 0.75/pxrem;
+        font-weight: 700; }
+      .section.home-blocks .block.events .event-item p {
+        margin: 0.8rem 0; }
+        @media screen and (max-width: 1140px) {
+          .section.home-blocks .block.events .event-item p {
+            margin: 0.3rem 0; } }
+      .section.home-blocks .block.events .event-item .type, .section.home-blocks .block.events .event-item .code, .section.home-blocks .block.events .event-item .event {
+        display: inline-block;
+        padding: 0 1rem; }
+        @media screen and (max-width: 880px) {
+          .section.home-blocks .block.events .event-item .type, .section.home-blocks .block.events .event-item .code, .section.home-blocks .block.events .event-item .event {
+            padding: 0 0.3rem; } }
+      .section.home-blocks .block.events .event-item .type {
+        color: #004b88;
+        font-size: 12px;
+        font-size: 0.75/pxrem;
+        font-weight: 700; }
+        .section.home-blocks .block.events .event-item .type:hover {
+          color: #000; }
+      .section.home-blocks .block.events .show-labels {
+        bottom: 0;
+        position: absolute;
+        right: 0;
+        font-size: 12px;
+        font-size: 0.75/pxrem;
+        font-weight: 700; }
+      .section.home-blocks .block.events .events-labels {
+        background: rgba(0, 0, 0, 0.9);
+        display: table;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition-delay: 0;
+        transition-delay: 0; }
+        .section.home-blocks .block.events .events-labels .labels-items {
+          display: table-cell;
+          padding: 0 4rem;
+          vertical-align: middle; }
+        .section.home-blocks .block.events .events-labels .labels-title {
+          color: #fff;
+          margin-bottom: 2rem;
+          font-size: 14px;
+          font-size: 0.875/pxrem;
+          font-weight: 700; }
+        .section.home-blocks .block.events .events-labels p {
+          margin: 0; }
+      .section.home-blocks .block .read-more {
+        bottom: 0;
+        margin-left: -50px;
+        position: absolute;
+        left: 50%; }
+
+>>>>>>> parent of d7757cc... Submenu criado
 /** 
  * Site-footer 
  */
