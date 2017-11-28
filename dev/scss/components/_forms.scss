@@ -1,6 +1,5 @@
 form {
 	margin: 0 auto;
-	max-width: 380px;
 }
 input[type="text"],
 input[type="email"],
@@ -22,7 +21,7 @@ textarea {
 	border: 1px solid $main_color;
 	color: #333;
 	margin-bottom: 10px;	
-	padding: 0.8rem;
+	padding: 1rem;
 	width: 100%;
 	&:focus {
 		box-shadow: inset 0 0 15px rgba(#000, 0.1);
@@ -36,4 +35,58 @@ textarea {
 }
 select {
 	border: 1px solid #333;
+}
+
+.enquiry-form {
+	max-width: 900px;
+	
+	.form-item {
+		display: inline-block;
+		margin-bottom: 0.5rem;
+	}
+
+	input[type="checkbox"] {
+		opacity: 0;
+		&:hover + label:before,
+		&:checked + label:before {
+			background: #fff;
+		}
+	}
+	label {
+		color: #fff;
+		cursor: pointer;
+		display: inline-block;
+		line-height: 14px;		
+		padding: 0;
+		text-transform: uppercase;
+		@include font(10, 600);
+		&:before {
+			background: transparent;
+			border: 1px solid #fff;
+			content: "";
+			display: inline-block;
+			float: left;
+			height: 14px;
+			margin-right: 5px;
+			width: 14px;
+			@include soft-transition;
+		}
+	}
+	
+	input[type="text"] {
+		background: transparent url(../images/input-shadow.png) center bottom no-repeat;
+		background-size: 100%;
+		border: 0;
+		box-shadow: none;
+		color: #fff;
+		height: 45px;
+		margin-top: 2rem;
+		text-align: center;
+	}
+	::placeholder {
+		color: #fff;
+		font-size: 12px;
+		opacity: 1;
+		text-align: center;
+	}
 }

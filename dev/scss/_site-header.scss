@@ -1,15 +1,31 @@
 .site-header {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 	margin: 1rem 0 0.5rem;
 >>>>>>> parent of d7757cc... Submenu criado
+=======
+	margin: 1rem 0 0;
+>>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
 	position: relative;
 }
 .main-navigation {
 	float: left;
+	margin-top: 2.4rem;
+	padding-left: 2rem;
+	text-align: center;
 	width: 100%;
-	@include below(880px) {
+	@include below($menu_mobile_breackpoint) {
 		margin: 0;
+		width: 100%;
+	}
+	&:before {
+		background: rgba(#000, 0.7);
+		content: "";
+		min-height: 350px;
+		position: absolute;
+		right: 0;
+		top: 100%;
 		width: 100%;
 	}
 	ul {
@@ -20,7 +36,7 @@
 		width: 100%;
 		z-index: 100;
 		@include soft-transition(0, all, 0.5s);
-		@include below(880px) {
+		@include below($menu_mobile_breackpoint) {
 			left: 0;
 			position: absolute;
 			top: -300%;
@@ -37,30 +53,65 @@
 		&.current-menu-item a {
 			color: #111;
 		}
-		@include below(880px) {
+		@include below($menu_mobile_breackpoint) {
 			border-top: 1px solid #ddd;
 			width: 100%;
 			&:first-child {
 				border-top: 0;
 			}
 		}
+
+		.sub-menu {
+			background: transparent;
+			left: 0;
+			opacity: 0;
+			padding: 5rem 1rem;
+			position: absolute;
+			top: 100%;
+			visibility: hidden;
+			width: 200px;
+			&:before {
+				left: 20px;
+				top: 20px;
+				@include css-triangle(#fff, down, 16px, absolute, false);
+			}
+			li {
+				display: block;
+				text-align: left;
+				width: 100%;
+			}
+			a {
+				color: #fff;
+				padding: 0.5rem 0;
+				text-transform: none;
+				@include font(18, 300);
+			}
+		}
+		&.menu-item-has-children {
+			&:hover {
+				> .sub-menu {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
 	}
 
 	a {
-		color: $gray_color;
+		color: $main_color;
 		display: block;
 		font-weight: 700;
-		padding: 0 1.8rem;
+		padding: 0 1rem;
 		text-decoration: none;
 		text-transform: uppercase;
 		&:hover, &:focus {
-			color: #111;
+			color: $secondary_color;
 		}
 		@include below(1120px) {
 			font-size: 0.8rem;
 			padding: 0 0.8rem;
 		}
-		@include below(880px) {
+		@include below($menu_mobile_breackpoint) {
 			display: block;
 			font-size: 1rem;
 			padding: 0.8rem 1.4rem;
@@ -85,7 +136,7 @@
 	position: absolute;
 	right: 5px;
 	text-align: center;	
-	top: 17px;
+	top: 8px;
 	width: 50px;
 	z-index: 1000;
 	transform: rotate(0deg);
@@ -130,7 +181,7 @@
 			width: 0%;
 		}
 	}
-	@include below(880px) {
+	@include below($menu_mobile_breackpoint) {
 		display: block;
 	}
 }

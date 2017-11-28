@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
 .homeslider {
 	background: transparent url(../images/slider-placeholder.png) center no-repeat;
 	background-size: cover;
@@ -44,7 +47,11 @@
 			}
 			.block-title {
 				color: $main_color;
+<<<<<<< HEAD
 				margin: 1rem auto 1.6rem;
+=======
+				margin: 1rem auto 1.4rem;
+>>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
 				@include font(14, 700);
 			}
 
@@ -120,6 +127,7 @@
 			&.events {
 				.today {
 					color: $secondary_color;
+<<<<<<< HEAD
 					@include font(12, 700);
 				}
 				.event-item {
@@ -128,6 +136,21 @@
 						@include below(1140px) {
 							margin: 0.3rem 0;
 						}
+=======
+					display: block;
+					margin-bottom: 1rem;
+					@include font(12, 700);
+				}
+				.event-item {
+					border-top: 1px solid #fff;
+					margin: 0 auto;
+					max-width: 260px;
+					&:last-child {
+						border-bottom: 1px solid #fff;
+					}
+					p {
+						margin: 0.3rem 0;
+>>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8
 					}
 					.type, .code, .event {
 						display: inline-block;
@@ -184,4 +207,7 @@
 		}
 	}
 }
+<<<<<<< HEAD
 >>>>>>> parent of d7757cc... Submenu criado
+=======
+>>>>>>> d7757ccd1cd916b6d44cc740fa530776980509c8

@@ -1,11 +1,7 @@
 /**
  * Vars 
  */
-$main_font: 'Arial', sans-serif;
-$heading_font: 'Georgia', serif;
-
-$main_color: #9d270e;
-$gray_color: #9d9b9a;
+@import "vars";
 
 /**
  * Mixins
@@ -16,7 +12,7 @@ $gray_color: #9d9b9a;
  * Defaults 
  */
 *, *:before, *:after {
-    box-sizing: border-box; 
+	box-sizing: border-box;
 }
 body {
     font-family: $main_font;
@@ -27,6 +23,13 @@ figure {
 img {
     height: auto;
     max-width: 100%;
+}
+a {
+	text-decoration: none;
+	@include soft-transition;
+	&:hover {
+		color: #000;
+	}
 }
 .site-header,
 .site-content,
@@ -77,3 +80,8 @@ img {
 @import "components/forms";
 @import "components/buttons";
 @import "components/media";
+
+// CSS debug
+// * {
+// 	border: 1px solid red !important;
+// }
