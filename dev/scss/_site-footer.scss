@@ -1,0 +1,10 @@
+.site-footer {
+	.credits {
+		a {
+			font-weight: bold;
+			&:hover {
+				color: #111;
+			}
+		}
+	}
+}

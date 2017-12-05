@@ -12,7 +12,7 @@ input[type="submit"] {
 	margin: 0 auto;
 	padding: 0.5rem 1rem;
 	text-transform: uppercase;
-	@include font-size(14px);
+	@include font(14);
 	&:hover,
 	&:active,
 	&:focus {

@@ -14,8 +14,6 @@
 		clip: auto !important;
 		color: $main_color;
 		display: block;
-		@include font-size(14px);
-		font-weight: bold;
 		height: auto;
 		left: 5px;
 		line-height: normal;
@@ -24,6 +22,7 @@
 		top: 5px;
 		width: auto;
 		z-index: 100000; /* Above WP toolbar. */
+		@include font(14, bold);
 	}
 }
 /* Do not show the outline on the skip link target. */

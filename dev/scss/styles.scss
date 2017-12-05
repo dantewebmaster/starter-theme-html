@@ -1,11 +1,7 @@
 /**
  * Vars 
  */
-$main_font: 'Arial', sans-serif;
-$heading_font: 'Georgia', serif;
-
-$main_color: #9d270e;
-$gray_color: #9d9b9a;
+@import "vars";
 
 /**
  * Mixins
@@ -15,26 +11,7 @@ $gray_color: #9d9b9a;
 /**
  * Defaults 
  */
-*, *:before, *:after {
-    box-sizing: border-box; 
-}
-body {
-    font-family: $main_font;
-}
-figure {
-    margin: 0;
-}
-img {
-    height: auto;
-    max-width: 100%;
-}
-.site-header,
-.site-content,
-.site-footer {
-    float: left;
-    padding: 1em 0;
-    width: 100%;
-}
+@import "defaults";
 
 /**
  * Accessibility 
@@ -62,12 +39,22 @@ img {
 @import "site-header";
 
 /** 
- * Site-footer 
+ * Site navigations
+ */
+@import "site-navigations";
+
+/** 
+ * Site content
  */
 @import "site-content";
 
 /** 
- * Site-footer 
+ * Site sections
+ */
+@import "site-sections";
+
+/** 
+ * Site footer 
  */
 @import "site-footer";
 

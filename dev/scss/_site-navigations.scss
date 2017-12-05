@@ -1,0 +1,123 @@
+.main-navigation {
+	float: left;
+	margin-top: 2rem;
+	width: 100%;
+	@include below($menu_mobile_breackpoint) {
+		margin: 0;
+		width: 100%;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		width: 100%;
+		z-index: 100;
+		@include soft-transition(0, all, 0.5s);
+		@include below($menu_mobile_breackpoint) {
+			background: #fff;
+			left: 0;
+			position: absolute;
+			top: -300%;
+			visibility: hidden;
+		}
+	}
+
+	li {
+		display: inline-block;
+		position: relative;
+		&.current-menu-item a {
+			color: #111;
+		}
+		@include below($menu_mobile_breackpoint) {
+			border-top: 1px solid $gray_color;
+			width: 100%;
+			&:first-child {
+				border-top: 0;
+			}
+			&:last-child {
+				border-bottom: 1px solid $gray_color;
+			}
+		}
+	}
+
+	a {
+		color: darken($gray_color, 30);
+		display: block;
+		padding: 0 1.8rem;
+		text-decoration: none;
+		&:hover, &:focus {
+			color: #111;
+		}
+		@include below($menu_mobile_breackpoint) {
+			display: block;
+			font-size: 1rem;
+			padding: 0.8rem 1.4rem;
+		}
+	}
+}
+
+/* Small menu. */
+.main-navigation.toggled ul {
+	opacity: 1;
+	overflow: hidden;
+	top: 100%;
+	visibility: visible;
+}
+.menu-toggle {
+	background: transparent;
+	border: 0;
+	border-radius: 3px;	
+	cursor: pointer;	
+	display: none;
+	height: 48px;
+	position: absolute;
+	right: 5px;
+	text-align: center;	
+	top: 17px;
+	width: 50px;
+	z-index: 1000;
+	transform: rotate(0deg);
+	transition: .3s ease-in-out;
+	span {
+		background: $main_color;
+		border-radius: 3px;
+		display: block;
+		height: 4px;
+		left: 7px;
+		opacity: 1;
+		position: absolute;
+		transform: rotate(0deg);
+		width: 35px;
+		@include soft-transition(0, all, 0.2s);
+		&:nth-child(1) { 
+			top: 12px;
+		}
+		&:nth-child(2),
+		&:nth-child(3) { 
+			top: 22px
+		}
+		&:nth-child(4) {
+			top: 32px;
+		}
+	}
+	&[aria-expanded="true"] {
+		span:nth-child(1) {
+			left: 50%;
+			top: 18px;
+			width: 0%;
+		}
+		span:nth-child(2) {
+			transform: rotate(45deg);
+		}
+		span:nth-child(3) { 
+			transform: rotate(-45deg);
+		}
+		span:nth-child(4) {
+			left: 50%;
+			top: 18px;
+			width: 0%;
+		}
+	}
+	@include below($menu_mobile_breackpoint) {
+		display: block;
+	}
+}

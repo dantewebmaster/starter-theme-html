@@ -1,0 +1,30 @@
+*, *:before, *:after {
+    box-sizing: border-box; 
+}
+body {
+    font-family: $main_font;
+}
+figure {
+    margin: 0;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+a {
+	color: $link_color;
+	text-decoration: none;
+	&:hover {
+		color: $link_hover_color;
+	}
+	&:visited {
+		color: $link_visited_color;
+	}
+}
+.site-header,
+.site-content,
+.site-footer {
+    float: left;
+    padding: 1em 0;
+    width: 100%;
+}

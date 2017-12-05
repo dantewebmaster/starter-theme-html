@@ -1,0 +1,8 @@
+.section {
+	float: left;
+	padding: 3rem 0;
+	width: 100%;
+	&.secondary {
+		background-color: transparentize($gray_color, 0.8);
+	}
+}
